@@ -1,41 +1,40 @@
-def introduce(name, age, city):
-    print(f"Меня зовут {name}")
-    print(f"Мне {age} лет")
-    print(f"Я живу в {city}")
+def greet(name, age):
+    print(f"Привет, {name}!")
+    print(f"Тебе {age} лет")
 
-# Вызываем с правильным порядком
-introduce("Олег", 20, "Москва")
+# Важен порядок аргументов
+greet("Анна", 25)
+greet("Иван", 30)
 
-def create_user(name, job, salary):
+def create_profile(name, job, city):
     print(f"Имя: {name}")
     print(f"Работа: {job}")
-    print(f"Зарплата: {salary}")
+    print(f"Город: {city}")
 
-# Порядок не важен, когда указываем имена
-create_user(salary=50000, name="Мария", job="врач")
-create_user(job="учитель", name="Петр", salary=40000)
+# Можно указывать в любом порядке
+create_profile(city="Москва", name="Олег", job="врач")
+create_profile(job="учитель", name="Мария", city="СПб")
 
-def order_pizza(dish, size="средняя", topping="сыр"):
-    print(f"Заказ: {dish}")
-    print(f"Размер: {size}")
-    print(f"Добавка: {topping}")
+def order_coffee(size="средний", sugar=True, milk=False):
+    print(f"Кофе: {size}")
+    print(f"Сахар: {'да' if sugar else 'нет'}")
+    print(f"Молоко: {'да' if milk else 'нет'}")
     print("---")
 
-# Можно не указывать size и topping
-order_pizza("Маргарита")
+# Можно не указывать все аргументы
+order_coffee()                          # все по умолчанию
+order_coffee("большой")                  # только размер
+order_coffee(milk=True, size="маленький") # именованные
 
-# Можно изменить только topping
-order_pizza("Пепперони", topping="грибы")
+def student_info(name, age, city="Неизвестен", course=1):
+    print(f"Студент: {name}")
+    print(f"Возраст: {age}")
+    print(f"Город: {city}")
+    print(f"Курс: {course}")
+    print("---")
 
-# Можно изменить все
-order_pizza("Гавайская", size="большая", topping="ананас")
-
-def print_numbers(*numbers):
-    print(f"Получили чисел: {len(numbers)}")
-    for num in numbers:
-        print(f"Число: {num}")
-
-# Можно передать сколько угодно чисел
-print_numbers(1, 2, 3)
-print("---")
-print_numbers(10, 20, 30, 40, 50)ч
+# Разные способы вызова
+student_info("Анна", 20)                          # только обязательные
+student_info("Иван", 22, "Москва")                # с городом
+student_info("Петр", 19, course=2)                 # с курсом
+student_info(age=21, name="Мария", city="Казань") # именованные
