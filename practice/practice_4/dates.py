@@ -78,39 +78,3 @@ print(f"\nВремя выполнения: {execution_time.total_seconds():.2f} 
 print(f"Точное значение: {execution_time}")
 
 from datetime import datetime ##4example
-import pytz
-
-# Получение списка всех часовых поясов
-print("Доступные часовые пояса (первые 5):")
-all_timezones = pytz.all_timezones[:5]
-for tz in all_timezones:
-    print(f"  {tz}")
-
-# Текущее время в UTC
-utc_now = datetime.now(pytz.UTC)
-print(f"\nВремя UTC: {utc_now.strftime('%Y-%m-%d %H:%M:%S %Z')}")
-
-# Конвертация в разные часовые пояса
-timezones_to_check = [
-    'Europe/Moscow',
-    'Europe/London',
-    'America/New_York',
-    'Asia/Tokyo',
-    'Australia/Sydney'
-]
-
-print("\nТекущее время в разных городах:")
-for tz_name in timezones_to_check:
-    tz = pytz.timezone(tz_name)
-    local_time = utc_now.astimezone(tz)
-    print(f"  {tz_name:20}: {local_time.strftime('%Y-%m-%d %H:%M:%S')}")
-
-# Создание даты с конкретным часовым поясом
-moscow_tz = pytz.timezone('Europe/Moscow')
-moscow_time = moscow_tz.localize(datetime(2025, 12, 31, 23, 59, 59))
-print(f"\nНовый год в Москве: {moscow_time}")
-print(f"В UTC это будет: {moscow_time.astimezone(pytz.UTC)}")
-
-# Важное замечание о timedelta с timezone-aware объектами
-print(f"\nСмещение московского времени: {moscow_time.utcoffset()}")
-print(f"Название зоны: {moscow_time.tzname()}")
