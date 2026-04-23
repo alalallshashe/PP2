@@ -21,11 +21,16 @@ class MickeyClock:
 
     def get_angles(self):
         now = datetime.datetime.now()
-        # В Pygame 0 градусов — это 3 часа (направо). 
-        # Чтобы 0 был на 12 часах, нужно вычесть угол из текущего положения.
-        # Также инвертируем, чтобы шло по часовой стрелке.
-        sec_angle = -now.second * 6
-        min_angle = -now.minute * 6
+        # Расчет точных углов для плавного движения стрелок
+        # Секундная стрелка: 6 градусов на секунду (360/60)
+        # Минутная стрелка: 6 градусов на минуту + 0.1 градуса на секунду (6/60)
+        seconds = now.second + now.microsecond / 1000000.0
+        minutes = now.minute + seconds / 60.0
+
+        # Корректировка: стрелки опережают на 15 минут (90 градусов)
+        # Вычитаем 90 градусов из расчетного угла
+        sec_angle = -(seconds * 6) - 90
+        min_angle = -(minutes * 6) + 90
         return sec_angle, min_angle
 
     def draw(self, surface):
