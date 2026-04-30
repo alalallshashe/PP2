@@ -1,0 +1,4 @@
+name,email,birthday,group,phone,type
+Alice Smith,alice@gmail.com,2001-05-10,Friend,123456789,mobile
+Bob Brown,bob@gmail.com,1999-12-01,Work,987654321,work
+Charlie White,charlie@gmail.com,2002-03-15,Family,555555555,home

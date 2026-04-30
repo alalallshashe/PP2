@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Alice Smith",
+    "email": "alice@gmail.com",
+    "birthday": "2001-05-10",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "123456789",
+        "type": "mobile"
+      }
+    ]
+  },
+  {
+    "name": "Charlie White",
+    "email": "charlie@gmail.com",
+    "birthday": "2002-03-15",
+    "group": "Family",
+    "phones": [
+      {
+        "phone": "555555555",
+        "type": "home"
+      }
+    ]
+  },
+  {
+    "name": "Bob Johnson",
+    "email": "bob@gmail.com",
+    "birthday": "1995-07-20",
+    "group": "Work",
+    "phones": [
+      {
+        "phone": "987654321",
+        "type": "work"
+      }
+    ]
+  },
+  {
+    "name": "Diana Prince",
+    "email": "diana@gmail.com",
+    "birthday": "1998-11-30",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "111222333",
+        "type": "mobile"
+      }
+    ]
+  },
+  {
+    "name": "Eve Adams",
+    "email": "eve@gmail.com",
+    "birthday": "2000-01-15",
+    "group": "Family",
+    "phones": [
+      {
+        "phone": "444555666",
+        "type": "home"
+      }
+    ]
+  },
+  {
+    "name": "Frank Miller",
+    "email": "frank@work.com",
+    "birthday": "1990-06-25",
+    "group": "Work",
+    "phones": [
+      {
+        "phone": "777888999",
+        "type": "work"
+      }
+    ]
+  },
+  {
+    "name": "Grace Lee",
+    "email": "grace@gmail.com",
+    "birthday": "2003-09-05",
+    "group": "Friend",
+    "phones": [
+      {
+        "phone": "321654987",
+        "type": "mobile"
+      }
+    ]
+  },
+  {
+    "name": "Henry Brown",
+    "email": "henry@gmail.com",
+    "birthday": "1997-04-12",
+    "group": "Other",
+    "phones": [
+      {
+        "phone": "654321098",
+        "type": "home"
+      }
+    ]
+  },
+  {
+    "name": "Irene Davis",
+    "email": "irene@work.com",
+    "birthday": "1993-08-18",
+    "group": "Work",
+    "phones": [
+      {
+        "phone": "098765432",
+        "type": "work"
+      }
+    ]
+  },
+  {
+    "name": "Jack Wilson",
+    "email": "jack@gmail.com",
+    "birthday": "2004-12-01",
+    "group": "Family",
+    "phones": [
+      {
+        "phone": "135792468",
+        "type": "mobile"
+      }
+    ]
+  }
+]

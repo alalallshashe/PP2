@@ -30,7 +30,7 @@ score = 0
 level = 1
 foods_collected_in_level = 0
 LEVEL_UP_THRESHOLD = 3  # Increase level every 3 foods
-speed = 10
+speed = 3
 
 def generate_food():
     """Generates random position for food that is not inside the snake body."""
